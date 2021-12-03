@@ -1,0 +1,22 @@
+<section class="container bg-dark text-light">
+    <div class="row" *ngIf="isLoaded">
+        <div class="col-sm-4">
+            <h2>Personal Info:</h2>
+            <div class="img-profile" style="height: 150px;width:150px;background: #aaa;border-radius: 50%;">
+            </div>
+            <div class="mb-3">
+                <p>STATUS</p>
+            </div>
+            <div class="mb-3">
+                <span>{{_auth.userData.firstname}} {{_auth.userData.lastname}}</span><br>
+                <span>{{_auth.userData.email}}</span><br>
+                <span>{{_auth.userData.gender}}</span><br>
+                <span>{{_auth.userData.birthDate|date:"short"}}</span><br>
+                <span>{{_auth.userData.role}}</span>
+            </div>
+        </div>
+        <div class="col-sm-8" style="background: #aaa;">
+            Posts of this user
+        </div>
+    </div>
+</section>
